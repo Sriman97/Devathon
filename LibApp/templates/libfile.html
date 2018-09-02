@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Library Fine{% endblock %}
+
+{% block content %}
+<h2>Library Fine</h2>
+<form action ='check' method="post">
+  {% csrf_token %}
+  <span>Book Id:</span><span name="bookId">{{ obj2.bookId }}</span>
+  <br>
+  <span>Fine:</span><div name="fcol">{{ fine2 }}</div>
+  <br>
+  <input type=hidden value={{ lid }} name="lil">
+
+</form>
+{% endblock %}

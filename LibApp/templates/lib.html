@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Return Book{% endblock %}
+
+{% block content %}
+<h2>Return Book</h2>
+<form action ='check' method="post">
+  {% csrf_token %}
+  <span>BookID:</span><input type="text" name="bookId" >
+  <br>
+  <input type=hidden value={{ lbu.libId }} name="lil">
+  <br>  
+  <button type="submit">Returned</button>
+</form>
+{% endblock %}
